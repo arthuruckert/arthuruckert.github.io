@@ -225,6 +225,35 @@ export default function CaseModal({ c, onClose }) {
               fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em',
             }}>{c.num}</div>
 
+            {/* Logo badge — top left over image */}
+            {c.logo && (
+              <div style={{
+                position: 'absolute', top: 14, left: 60,
+                background: c.logoBg || 'rgba(0,0,0,0.55)',
+                backdropFilter: c.logoBg ? 'none' : 'blur(8px)',
+                border: c.logoBg ? 'none' : '1px solid rgba(255,255,255,0.12)',
+                borderRadius: c.logoRound ? '50%' : 10,
+                padding: c.logoBg ? '5px 12px' : '5px 10px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                overflow: 'hidden',
+                maxHeight: 36,
+              }}>
+                <img
+                  src={c.logo}
+                  alt={c.client}
+                  style={{
+                    height: c.logoRound ? 26 : 22,
+                    width: c.logoRound ? 26 : 'auto',
+                    maxWidth: 100,
+                    objectFit: 'contain',
+                    display: 'block',
+                    borderRadius: c.logoRound ? '50%' : 0,
+                  }}
+                  onError={e => { e.target.parentElement.style.display = 'none' }}
+                />
+              </div>
+            )}
+
             {/* Client name row */}
             <div style={{
               position: 'absolute', bottom: 0, left: 0, right: 0,

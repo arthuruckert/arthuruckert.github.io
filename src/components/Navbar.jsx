@@ -7,7 +7,7 @@ import { t } from '../data/translations'
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const { lang, toggle } = useLanguage()
+  const { lang } = useLanguage()
 
   const links = t(lang, 'navbar.links')
   const cta = t(lang, 'navbar.cta')
@@ -79,25 +79,6 @@ export default function Navbar() {
                 onMouseLeave={e => e.target.style.color = scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)'}
               >{label}</a>
             ))}
-            <button
-              onClick={toggle}
-              style={{
-                background: 'none',
-                border: '1px solid var(--border)',
-                borderRadius: 100,
-                padding: '6px 14px',
-                fontSize: 11,
-                fontWeight: 700,
-                letterSpacing: '0.1em',
-                color: 'var(--muted)',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)' }}
-              onMouseLeave={e => { e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.borderColor = 'var(--border)' }}
-            >
-              {lang === 'pt' ? 'EN' : 'PT'}
-            </button>
             <Magnetic>
               <a href="#contato" style={{
                 background: scrolled ? 'var(--text)' : 'rgba(255,255,255,0.12)',
@@ -112,26 +93,6 @@ export default function Navbar() {
               >{cta}</a>
             </Magnetic>
           </nav>
-
-          {/* Lang toggle — mobile only */}
-          <button
-            onClick={toggle}
-            className="mobile-lang-btn"
-            style={{
-              display: 'none',
-              background: 'none',
-              border: '1px solid var(--border)',
-              borderRadius: 100,
-              padding: '5px 12px',
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: '0.1em',
-              color: 'var(--muted)',
-              cursor: 'pointer',
-            }}
-          >
-            {lang === 'pt' ? 'EN' : 'PT'}
-          </button>
 
           <button onClick={() => setOpen(o => !o)} className="burger-btn" style={{
             display: 'none', flexDirection: 'column', gap: 5,
@@ -175,26 +136,6 @@ export default function Navbar() {
                 }}
               >{label}</motion.a>
             ))}
-            <motion.button
-              onClick={toggle}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: links.length * 0.08 + 0.08 }}
-              style={{
-                background: 'none',
-                border: '1px solid var(--border)',
-                borderRadius: 100,
-                padding: '8px 20px',
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: '0.1em',
-                color: 'var(--muted)',
-                cursor: 'pointer',
-                marginTop: 16,
-              }}
-            >
-              {lang === 'pt' ? 'EN' : 'PT'}
-            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -203,7 +144,6 @@ export default function Navbar() {
         @media (max-width: 900px) {
           .desktop-nav { display:none!important; }
           .burger-btn { display:flex!important; }
-          .mobile-lang-btn { display:block!important; }
         }
       `}</style>
     </>

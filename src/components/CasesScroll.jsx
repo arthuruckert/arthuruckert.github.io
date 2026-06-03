@@ -5,17 +5,17 @@ import CaseModal from './CaseModal'
 import { useLanguage } from '../context/LanguageContext'
 import { t } from '../data/translations'
 
-const CARD_W = 320
-const CARD_GAP = 14
+const CARD_W = 360
+const CARD_GAP = 16
 
-function CaseCard({ c, onClick, lang, viewCaseLabel }) {
+function CaseCard({ c, onClick, viewCaseLabel }) {
   const [hovered, setHovered] = useState(false)
-  const loc = (field) => (lang === 'en' && c.en?.[field]) ? c.en[field] : c[field]
+  const loc = (field) => (c.en?.[field]) ? c.en[field] : c[field]
 
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      whileHover={{ y: -6 }}
+      transition={{ type: 'spring', stiffness: 280, damping: 24 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       onClick={() => onClick(c)}
@@ -25,111 +25,115 @@ function CaseCard({ c, onClick, lang, viewCaseLabel }) {
         border: '1px solid var(--border)',
         borderRadius: 20, overflow: 'hidden',
         cursor: 'pointer',
-        transition: 'border-color 0.3s',
+        transition: 'border-color 0.3s, box-shadow 0.3s',
         borderColor: hovered ? `${c.accent}55` : 'var(--border)',
+        boxShadow: hovered ? `0 12px 48px ${c.accent}18` : '0 0 0 transparent',
         userSelect: 'none',
         scrollSnapAlign: 'start',
       }}
     >
-      {/* Cover — logo only on dark background */}
-      <div style={{
-        height: 220, position: 'relative',
-        background: `radial-gradient(ellipse at 50% 60%, ${c.accent}18 0%, transparent 70%), #0e0e0e`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        overflow: 'hidden',
-      }}>
-        {/* Subtle grid texture */}
+      {/* Cover — full bleed image */}
+      <div style={{ height: 240, position: 'relative', overflow: 'hidden', background: '#0e0e0e' }}>
+
+        <motion.img
+          src={c.image}
+          alt={c.client}
+          animate={{ scale: hovered ? 1.06 : 1 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            width: '100%', height: '100%',
+            objectFit: 'cover',
+            objectPosition: c.imagePosition || 'center',
+            display: 'block',
+          }}
+          draggable={false}
+          onError={e => { e.target.style.display = 'none' }}
+        />
+
+        {/* Gradient overlay — stronger at bottom */}
         <div style={{
-          position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.04,
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
+          position: 'absolute', inset: 0,
+          background: `linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.08) 0%,
+            rgba(0,0,0,0.0) 25%,
+            rgba(0,0,0,0.55) 70%,
+            rgba(0,0,0,0.85) 100%
+          )`,
         }} />
 
-        {/* Accent corner glow */}
+        {/* Accent tint */}
         <div style={{
-          position: 'absolute', bottom: -40, left: -40,
-          width: 160, height: 160, borderRadius: '50%',
-          background: `radial-gradient(circle, ${c.accent}22 0%, transparent 70%)`,
-          pointerEvents: 'none',
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: `radial-gradient(ellipse at 80% 120%, ${c.accent}14 0%, transparent 60%)`,
         }} />
 
-        {/* Num top-left */}
+        {/* Case number — top left */}
         <div style={{
           position: 'absolute', top: 14, left: 16,
-          fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.14em',
+          fontSize: 11, fontWeight: 700,
+          color: 'rgba(255,255,255,0.45)',
+          letterSpacing: '0.14em',
         }}>{c.num}</div>
 
-        {/* Result badge top-right */}
+        {/* Key metric — top right, glassmorphism */}
         <div style={{
           position: 'absolute', top: 12, right: 12,
-          background: `${c.accent}20`, border: `1px solid ${c.accent}50`,
-          color: c.accent, fontSize: 11, fontWeight: 800,
-          padding: '4px 12px', borderRadius: 100,
+          background: 'rgba(0,0,0,0.5)',
+          backdropFilter: 'blur(10px)',
+          border: `1px solid ${c.accent}55`,
+          color: c.accent,
+          fontSize: 11, fontWeight: 800,
+          padding: '5px 13px', borderRadius: 100,
+          letterSpacing: '0.02em',
         }}>{loc('metrics')[0].value}</div>
 
-        {/* Logo — centrado e grande */}
-        <motion.div
-          animate={{ scale: hovered ? 1.06 : 1 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          style={{
-            position: 'relative', zIndex: 1,
-            borderRadius: c.logoRound ? '50%' : 14,
-            overflow: 'hidden',
-            background: c.logoBg || 'transparent',
-            padding: c.logoBg ? '12px 20px' : 0,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: c.logoBg ? '0 4px 24px rgba(0,0,0,0.3)' : 'none',
-          }}
-        >
-          <img
-            src={c.logo}
-            alt={c.client}
-            style={{
-              width: c.logoRound ? 96 : c.logoBg ? 160 : 110,
-              height: c.logoRound ? 96 : c.logoBg ? 72 : 80,
-              objectFit: 'contain',
-              display: 'block',
-              borderRadius: c.logoRound ? '50%' : 0,
-            }}
-            onError={e => {
-              e.target.style.display = 'none'
-              e.target.parentElement.innerHTML = `<span style="font-size:28px;font-weight:900;color:${c.accent};letter-spacing:-0.04em">${c.client}</span>`
-            }}
-            draggable={false}
-          />
-        </motion.div>
+        {/* Bottom overlay — client name + tag */}
+        <div style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0,
+          padding: '12px 16px 14px',
+          display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 8,
+        }}>
+          <div style={{
+            fontSize: 18, fontWeight: 900, letterSpacing: '-0.03em',
+            color: '#fff', lineHeight: 1.1,
+            textShadow: '0 1px 8px rgba(0,0,0,0.6)',
+          }}>{c.client}</div>
+
+          <div style={{
+            fontSize: 9, letterSpacing: '0.1em', textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.75)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            background: 'rgba(0,0,0,0.4)',
+            backdropFilter: 'blur(6px)',
+            padding: '4px 9px', borderRadius: 100,
+            flexShrink: 0, whiteSpace: 'nowrap',
+          }}>{loc('tag')}</div>
+        </div>
       </div>
 
-      {/* Content */}
-      <div style={{ padding: '18px 20px 22px' }}>
-
-        {/* Header row */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
-          <span style={{ fontSize: 14, fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--text)' }}>{c.client}</span>
-          <span style={{
-            fontSize: 9, letterSpacing: '0.1em', textTransform: 'uppercase',
-            color: 'var(--muted)', border: '1px solid var(--border)',
-            padding: '2px 8px', borderRadius: 100, flexShrink: 0,
-          }}>{loc('tag')}</span>
-        </div>
+      {/* Content — minimal */}
+      <div style={{ padding: '14px 18px 16px' }}>
 
         {/* Headline */}
         <p style={{
-          fontSize: 11, color: `${c.accent}cc`, lineHeight: 1.4,
-          marginBottom: 14, fontWeight: 600, letterSpacing: '-0.01em',
+          fontSize: 13, color: `${c.accent}dd`, lineHeight: 1.45,
+          fontWeight: 700, letterSpacing: '-0.01em',
+          marginBottom: 14,
+          minHeight: 38,
         }}>
           {loc('headline')}
         </p>
 
-        {/* Divider */}
-        <div style={{ height: 1, background: 'var(--border)', marginBottom: 14, opacity: 0.6 }} />
-
-        {/* Metrics 2×2 grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 8px' }}>
-          {loc('metrics').map(m => (
+        {/* 2 key metrics inline */}
+        <div style={{
+          display: 'flex', gap: 8, marginBottom: 14,
+        }}>
+          {loc('metrics').slice(0, 2).map(m => (
             <div key={m.label} style={{
-              background: `${c.accent}08`,
-              border: `1px solid ${c.accent}18`,
+              flex: 1,
+              background: `${c.accent}0a`,
+              border: `1px solid ${c.accent}20`,
               borderRadius: 10, padding: '8px 10px',
             }}>
               <div style={{
@@ -144,66 +148,27 @@ function CaseCard({ c, onClick, lang, viewCaseLabel }) {
           ))}
         </div>
 
-        {/* Story context line */}
-        {loc('story')?.[0] && (
-          <p style={{
-            fontSize: 10, color: 'rgba(255,255,255,0.28)', lineHeight: 1.5,
-            marginTop: 12, paddingTop: 12,
-            borderTop: '1px solid var(--border)',
-            letterSpacing: '0.01em',
-          }}>
-            {loc('story')[0].text.length > 90 ? loc('story')[0].text.slice(0, 88) + '…' : loc('story')[0].text}
-          </p>
-        )}
-
-        {/* View case CTA */}
-        <div style={{ marginTop: 14 }}>
-          <div style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            background: `${c.accent}12`,
-            border: `1px solid ${c.accent}35`,
-            borderRadius: 12,
-            padding: '11px 16px',
-            color: c.accent,
-            fontSize: 12, fontWeight: 700,
-            letterSpacing: '0.02em',
-          }}>
-            <span>{viewCaseLabel}</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
+        {/* CTA */}
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          paddingTop: 12,
+          borderTop: `1px solid rgba(255,255,255,0.06)`,
+          color: hovered ? c.accent : 'var(--muted)',
+          fontSize: 11, fontWeight: 700,
+          letterSpacing: '0.08em', textTransform: 'uppercase',
+          transition: 'color 0.2s',
+        }}>
+          <span>{viewCaseLabel}</span>
+          <motion.svg
+            animate={{ x: hovered ? 3 : 0 }}
+            transition={{ duration: 0.2 }}
+            width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.5"
+            strokeLinecap="round" strokeLinejoin="round"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </motion.svg>
         </div>
-
-        {/* Instagram link */}
-        {c.instagram && (
-          <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--border)' }}>
-            <a
-              href={c.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={e => e.stopPropagation()}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 7,
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: 100,
-                padding: '6px 12px 6px 8px',
-                fontSize: 11, fontWeight: 600,
-                color: 'var(--muted)',
-                textDecoration: 'none', transition: 'all 0.2s',
-                letterSpacing: '0.02em',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.18)'; e.currentTarget.style.background = 'rgba(255,255,255,0.07)' }}
-              onMouseLeave={e => { e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)' }}
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-              {'@' + c.instagram.replace(/https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/$/, '')}
-            </a>
-          </div>
-        )}
       </div>
     </motion.div>
   )
@@ -260,13 +225,12 @@ export default function CasesScroll() {
               {tr.headlineA}<br />
               <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>{tr.headlineB}</span>
             </motion.h2>
-            <p style={{ fontSize: 13, color: 'var(--muted)', maxWidth: 220, lineHeight: 1.5 }}>
-              {tr.subtitle}
+            <p style={{ fontSize: 13, color: 'var(--muted)', maxWidth: 240, lineHeight: 1.6 }}>
+              {cases.length} cases · drag or click to explore →
             </p>
           </div>
         </div>
 
-        {/* Native scroll container */}
         <div
           ref={scrollRef}
           className="cases-scroll"
@@ -276,7 +240,7 @@ export default function CasesScroll() {
           onMouseMove={handleMouseMove}
           style={{
             display: 'flex', gap: CARD_GAP,
-            padding: '8px 48px 32px',
+            padding: '8px 48px 36px',
             overflowX: 'auto',
             overflowY: 'visible',
             scrollSnapType: 'x mandatory',
@@ -287,9 +251,8 @@ export default function CasesScroll() {
           }}
         >
           {cases.map(c => (
-            <CaseCard key={c.id} c={c} onClick={handleCardClick} lang={lang} viewCaseLabel={tr.viewCase} />
+            <CaseCard key={c.id} c={c} onClick={handleCardClick} viewCaseLabel={tr.viewCase} />
           ))}
-          {/* Right padding trick */}
           <div style={{ width: 32, flexShrink: 0 }} />
         </div>
       </section>
@@ -299,7 +262,7 @@ export default function CasesScroll() {
       )}
 
       <style>{`
-        div[style*="overflow-x: auto"]::-webkit-scrollbar { display: none; }
+        .cases-scroll::-webkit-scrollbar { display: none; }
       `}</style>
     </>
   )

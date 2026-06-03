@@ -1,7 +1,6 @@
 import Cursor from './components/Cursor'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Bento from './components/Bento'
 import CasesScroll from './components/CasesScroll'
 import Services from './components/Services'
 import About from './components/About'
@@ -20,8 +19,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Bento />
-        <CasesScroll />
+<CasesScroll />
         <Services />
         <About />
         <Testimonials />

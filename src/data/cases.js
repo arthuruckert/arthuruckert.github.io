@@ -54,6 +54,7 @@ export const cases = [
       img('/assets/img/trestique-7d-may26.png'),
       img('/assets/img/trestique-365d.png'),
       img('/assets/img/trestique-google.png'),
+      img('/assets/img/trestique-attribution.png'),
       img('/assets/img/trestique-ugc-gallery.png'),
       img('/assets/img/trestique-creative-detail.png'),
       img('/assets/img/trestique-creatives2.png'),

@@ -157,7 +157,7 @@ export const translations = {
       ctaSecondary: 'Work together',
       stats: [
         { value: '$200K+', badge: 'USD', label: 'Adspend/mo' },
-        { value: '79%', badge: '', label: 'CPL reduction' },
+        { value: '$1M+', badge: '', label: 'E-comm revenue' },
         { value: '50+', badge: '', label: 'Brands' },
       ],
       scroll: 'Scroll ↓',

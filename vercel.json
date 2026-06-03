@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/formulario",
+      "destination": "https://formulario-ruckert.vercel.app/index.html"
+    },
+    {
+      "source": "/formulario/(.*)",
+      "destination": "https://formulario-ruckert.vercel.app/$1"
+    }
+  ]
+}

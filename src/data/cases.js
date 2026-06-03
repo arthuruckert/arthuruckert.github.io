@@ -39,8 +39,8 @@ export const cases = [
     accent: '#0891b2',
     instagram: 'https://www.instagram.com/smoovee_global/',
     image: img('/assets/img/smoovee_cover.jpg'),
-    logo: img('/assets/img/smoovee_logo.png'),
-    logoBg: '#111111',
+    logo: img('/assets/img/smoovee_icon.jpg'),
+    logoRound: true,
     resultsLabel: 'Campaign results',
     resultsImages: [
       img('/assets/img/smoovee-triplewhale.png'),

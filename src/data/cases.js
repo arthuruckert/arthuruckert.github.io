@@ -39,8 +39,8 @@ export const cases = [
     accent: '#c2956c',
     instagram: 'https://www.instagram.com/trestique/',
     image: img('/assets/img/trestique-ytd-jun3.png'),
-    logo: img('/assets/img/trestique_logo.svg'),
-    logoBg: '#ffffff',
+    logo: img('/assets/img/trestique_icon.jpg'),
+    logoRound: true,
     gallery: [
       img('/assets/img/trestique-30d-may31.png'),
       img('/assets/img/trestique-7d-may26.png'),

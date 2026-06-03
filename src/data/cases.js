@@ -3,8 +3,58 @@ const img = (p) => `${BASE}${p.replace(/^\//, '')}`
 
 export const cases = [
   {
-    id: 'trestique',
+    id: 'smoovee',
     num: '01',
+    client: 'Smoovee',
+    tag: 'E-commerce · Kitchen · USA',
+    headline: 'Google 11.57x ROAS · 117 purchases · sold out.',
+    metrics: [
+      { value: '11.57x', label: 'Google Ads ROAS' },
+      { value: '2.52x', label: 'Blended ROAS' },
+      { value: '117', label: 'Purchases (1 ad set)' },
+      { value: 'Sold out', label: 'Product status' },
+    ],
+    story: [
+      { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a visual ad hook.' },
+      { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience. The challenge: find the right audiences and creatives fast, before budget runs out, in a market with no brand recognition.' },
+      { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap testing', text: 'Launched parallel campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Tested Mother\'s Day as a seasonal angle. Retesting winners systematically to scale what works.' },
+      { step: '04 · THE RESULT', title: 'Google 11.57x ROAS · 2.52x blended · sold out', text: 'Google Ads a 11.57x ROAS. ROAS blended de 2.52x em todos os canais. Melhor ad set Meta: 117 compras a $49.70 CPP. Produtos esgotados. Pedidos em tempo real via TripleWhale.' },
+    ],
+    en: {
+      tag: 'E-commerce · Kitchen · USA',
+      headline: 'Google 11.57x ROAS · 117 purchases · sold out.',
+      metrics: [
+        { value: '11.57x', label: 'Google Ads ROAS' },
+        { value: '2.52x', label: 'Blended ROAS' },
+        { value: '117', label: 'Purchases (1 ad set)' },
+        { value: 'Sold out', label: 'Product status' },
+      ],
+      story: [
+        { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a natural visual hook for UGC creatives.' },
+        { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience or brand recognition. The challenge: find winning audiences and creatives fast, control CPP, and build a full-funnel structure from scratch.' },
+        { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap + Google complementing Meta', text: 'Built parallel Meta campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Added Google Ads as demand capture for branded and category search. Mother\'s Day used as a seasonal scaling angle.' },
+        { step: '04 · THE RESULT', title: 'Google 11.57x ROAS · 2.52x blended · products sold out', text: 'Google Ads running at 11.57x pixel ROAS. Blended ROAS of 2.52x across all channels. Best Meta ad set: 117 purchases at $49.70 CPP. Products drove to sold out status. Live orders tracking via TripleWhale.' },
+      ],
+    },
+    accent: '#0891b2',
+    instagram: 'https://www.instagram.com/smoovee_global/',
+    image: img('/assets/img/smoovee_cover.jpg'),
+    logo: img('/assets/img/smoovee_logo.png'),
+    logoBg: '#111111',
+    resultsLabel: 'Campaign results',
+    resultsImages: [
+      img('/assets/img/smoovee-triplewhale.png'),
+      img('/assets/img/smoovee-30d.jpg'),
+      img('/assets/img/smoovee-7d.jpg'),
+      img('/assets/img/smoovee-campaigns-desktop.png'),
+      img('/assets/img/smoovee-campaigns-116.jpg'),
+      img('/assets/img/smoovee-campaigns-yesterday.png'),
+      img('/assets/img/smoovee-campaigns-today.png'),
+    ],
+  },
+  {
+    id: 'trestique',
+    num: '02',
     client: 'Trestique',
     tag: 'Beauty · E-commerce · USA',
     headline: '$812K YTD · 1.90x ROAS · $309K net profit · +161% growth.',
@@ -66,7 +116,7 @@ export const cases = [
   },
   {
     id: 'er',
-    num: '02',
+    num: '03',
     client: 'Eric Rich',
     tag: 'High-Ticket Coaching · EUA',
     headline: '$34K investidos · 547 calls · produto de $8K.',
@@ -127,7 +177,7 @@ export const cases = [
   },
   {
     id: 'cb',
-    num: '03',
+    num: '04',
     client: 'Cherub Baby',
     tag: 'E-commerce · Austrália',
     headline: 'ROAS 4.79x · AUD $50K/mês em baby products.',
@@ -185,7 +235,7 @@ export const cases = [
   },
   {
     id: 'ks',
-    num: '04',
+    num: '05',
     client: 'KS Metais',
     tag: 'B2B · Industrial',
     headline: 'De $10 por lead para $2,24.',
@@ -250,7 +300,7 @@ export const cases = [
   },
   {
     id: 'pmb',
-    num: '05',
+    num: '06',
     client: 'Pick My Brain',
     tag: 'AI SaaS · Silicon Valley',
     headline: '0 para 500 assinaturas em 3 mercados.',
@@ -315,7 +365,7 @@ export const cases = [
   },
   {
     id: 'mossy',
-    num: '06',
+    num: '07',
     client: 'MOSSY',
     tag: 'Moda · E-commerce',
     headline: 'De R$30K para R$320K/mês.',
@@ -371,7 +421,7 @@ export const cases = [
   },
   {
     id: 'ct',
-    num: '07',
+    num: '08',
     client: 'Casa Tropical',
     tag: 'Lifestyle · Moda Premium',
     headline: '7K para 32K seguidores + ROAS 14x.',
@@ -448,7 +498,7 @@ export const cases = [
   },
   {
     id: 'bloom',
-    num: '08',
+    num: '09',
     client: 'Bloom → Loum',
     tag: 'Moda · Rebranding',
     headline: 'ROAS 19x · R$686K em conversões.',
@@ -505,7 +555,7 @@ export const cases = [
   },
   {
     id: 'neg',
-    num: '09',
+    num: '10',
     client: 'Negãozin',
     tag: 'Creator · TikTok',
     headline: '9K para 136K seguidores · 19,8M views.',
@@ -554,7 +604,7 @@ export const cases = [
   },
   {
     id: 'rp',
-    num: '10',
+    num: '11',
     client: 'Rotoplast',
     tag: 'B2B · Industrial',
     headline: 'CPL de $1,34 com leads qualificados.',
@@ -600,7 +650,7 @@ export const cases = [
   },
   {
     id: 'tr',
-    num: '11',
+    num: '12',
     client: 'Traffic Raptors',
     tag: 'Nutraceuticals · EUA / CA / EU / AU',
     headline: 'ROAS 3.4x a 5.3x em 4 mercados.',
@@ -656,55 +706,5 @@ export const cases = [
       img('/assets/img/tr_video_6.mp4'),
       img('/assets/img/tr_video_7.mp4'),
     ],
-  },
-  {
-    id: 'smoovee',
-    num: '12',
-    client: 'Smoovee',
-    tag: 'E-commerce · Kitchen · USA',
-    headline: 'Google 11.57x ROAS · 117 purchases · sold out.',
-    metrics: [
-      { value: '11.57x', label: 'Google Ads ROAS' },
-      { value: '2.52x', label: 'Blended ROAS' },
-      { value: '117', label: 'Purchases (1 ad set)' },
-      { value: 'Sold out', label: 'Product status' },
-    ],
-    story: [
-      { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a visual ad hook.' },
-      { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience. The challenge: find the right audiences and creatives fast, before budget runs out, in a market with no brand recognition.' },
-      { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap testing', text: 'Launched parallel campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Tested Mother\'s Day as a seasonal angle. Retesting winners systematically to scale what works.' },
-      { step: '04 · THE RESULT', title: 'Google 11.57x ROAS · 2.52x blended · sold out', text: 'Google Ads a 11.57x ROAS. ROAS blended de 2.52x em todos os canais. Melhor ad set Meta: 117 compras a $49.70 CPP. Produtos esgotados. Pedidos em tempo real via TripleWhale.' },
-    ],
-    en: {
-      tag: 'E-commerce · Kitchen · USA',
-      headline: 'Google 11.57x ROAS · 117 purchases · sold out.',
-      metrics: [
-        { value: '11.57x', label: 'Google Ads ROAS' },
-        { value: '2.52x', label: 'Blended ROAS' },
-        { value: '117', label: 'Purchases (1 ad set)' },
-        { value: 'Sold out', label: 'Product status' },
-      ],
-      story: [
-        { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a natural visual hook for UGC creatives.' },
-        { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience or brand recognition. The challenge: find winning audiences and creatives fast, control CPP, and build a full-funnel structure from scratch.' },
-        { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap + Google complementing Meta', text: 'Built parallel Meta campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Added Google Ads as demand capture for branded and category search. Mother\'s Day used as a seasonal scaling angle.' },
-        { step: '04 · THE RESULT', title: 'Google 11.57x ROAS · 2.52x blended · products sold out', text: 'Google Ads running at 11.57x pixel ROAS. Blended ROAS of 2.52x across all channels. Best Meta ad set: 117 purchases at $49.70 CPP. Products drove to sold out status. Live orders tracking via TripleWhale.' },
-      ],
-    },
-    accent: '#0891b2',
-    instagram: 'https://www.instagram.com/smoovee_global/',
-    image: img('/assets/img/smoovee_cover.jpg'),
-    logo: img('/assets/img/smoovee_logo.png'),
-    logoBg: '#111111',
-    resultsLabel: 'Campaign results',
-    resultsImages: [
-      img('/assets/img/smoovee-triplewhale.png'),
-      img('/assets/img/smoovee-30d.jpg'),
-      img('/assets/img/smoovee-7d.jpg'),
-      img('/assets/img/smoovee-campaigns-desktop.png'),
-      img('/assets/img/smoovee-campaigns-116.jpg'),
-      img('/assets/img/smoovee-campaigns-yesterday.png'),
-      img('/assets/img/smoovee-campaigns-today.png'),
-    ],
-  },
+  }
 ]

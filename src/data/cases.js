@@ -656,5 +656,52 @@ export const cases = [
       img('/assets/img/tr_video_6.mp4'),
       img('/assets/img/tr_video_7.mp4'),
     ],
-  }
+  },
+  {
+    id: 'smoovee',
+    num: '12',
+    client: 'Smoovee',
+    tag: 'E-commerce · Kitchen · USA',
+    headline: 'Sold out. 116 purchases · $33.76 best CPP.',
+    metrics: [
+      { value: '$33.76', label: 'Best CPP' },
+      { value: '116', label: 'Purchases (1 ad set)' },
+      { value: '42', label: 'Campaigns running' },
+      { value: 'Sold out', label: 'Product status' },
+    ],
+    story: [
+      { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a visual ad hook.' },
+      { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience. The challenge: find the right audiences and creatives fast, before budget runs out, in a market with no brand recognition.' },
+      { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap testing', text: 'Launched parallel campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Tested Mother\'s Day as a seasonal angle. Retesting winners systematically to scale what works.' },
+      { step: '04 · THE RESULT', title: '116 purchases · $33.76 CPP · products sold out', text: 'Best ad set: 116 purchases at $50.13 CPP. Best CPP achieved: $33.76 (BID CAP). Mother\'s Day campaign: 25 purchases at $56.60. Products drove to sold out status — now scaling with winning creative system in place.' },
+    ],
+    en: {
+      tag: 'E-commerce · Kitchen · USA',
+      headline: 'Sold out. 116 purchases · $33.76 best CPP.',
+      metrics: [
+        { value: '$33.76', label: 'Best CPP' },
+        { value: '116', label: 'Purchases (1 ad set)' },
+        { value: '42', label: 'Campaigns running' },
+        { value: 'Sold out', label: 'Product status' },
+      ],
+      story: [
+        { step: '01 · THE PRODUCT', title: 'Kitchen appliance sliders, USA', text: 'Smoovee makes counter-top platforms with 360° swivel wheels — designed to slide heavy kitchen appliances effortlessly. A niche product solving a real problem, with strong organic appeal and a visual ad hook.' },
+        { step: '02 · THE CHALLENGE', title: 'New brand, cold US market', text: 'Launching a brand-new product in the US with no existing audience. The challenge: find the right audiences and creatives fast, before budget runs out, in a market with no brand recognition.' },
+        { step: '03 · THE STRATEGY', title: 'LLA + UGC + Bid Cap testing', text: 'Launched parallel campaigns using Lookalike Audiences, UGC-style creatives, and bid cap strategies to control CPP. Tested Mother\'s Day as a seasonal angle. Retesting winners systematically to scale what works.' },
+        { step: '04 · THE RESULT', title: '116 purchases · $33.76 CPP · products sold out', text: 'Best ad set: 116 purchases at $50.13 CPP. Best CPP achieved: $33.76 (BID CAP). Mother\'s Day campaign: 25 purchases at $56.60. Products drove to sold out status — now scaling with winning creative system in place.' },
+      ],
+    },
+    accent: '#0891b2',
+    instagram: 'https://www.instagram.com/smoovee_global/',
+    image: img('/assets/img/smoovee_cover.jpg'),
+    logo: img('/assets/img/smoovee_logo.png'),
+    logoBg: '#111111',
+    resultsLabel: 'Campaign results',
+    resultsImages: [
+      img('/assets/img/smoovee-campaigns-desktop.png'),
+      img('/assets/img/smoovee-campaigns-116.jpg'),
+      img('/assets/img/smoovee-campaigns-yesterday.png'),
+      img('/assets/img/smoovee-campaigns-today.png'),
+    ],
+  },
 ]

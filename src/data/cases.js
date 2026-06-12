@@ -156,7 +156,10 @@ export const cases = [
     resultsLabel: 'Campaign results · Meta Ads Manager',
     resultsImages: [
       img('/assets/img/eg-campaigns.png'),
+      img('/assets/img/eg-campaigns2.png'),
       img('/assets/img/eg-adsets-roas.png'),
+      img('/assets/img/eg-adsets-roas2.png'),
+      img('/assets/img/eg-ads-ugc.png'),
       img('/assets/img/eg-ugc-creative.png'),
     ],
   },

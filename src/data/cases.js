@@ -115,8 +115,54 @@ export const cases = [
     ],
   },
   {
-    id: 'er',
+    id: 'eg',
     num: '03',
+    client: 'Effing Gear',
+    tag: 'E-commerce · Workwear · USA',
+    headline: '1,083 purchases · $26 CPP · $47K revenue in 30 days.',
+    metrics: [
+      { value: '1,083', label: 'Purchases (30d)' },
+      { value: '$26', label: 'Cost per purchase' },
+      { value: '$47K', label: 'Revenue (30d)' },
+      { value: '$28K', label: 'Ad spend (30d)' },
+    ],
+    story: [
+      { step: '01 · THE BRAND', title: 'Workwear hats for blue-collar workers', text: 'Effing Gear makes bold, attitude-forward headwear for the American blue-collar worker — truckers, contractors, outdoor laborers. Strong UGC potential: their customers are proud repeat buyers who show off the product.' },
+      { step: '02 · THE CHALLENGE', title: 'Inherited chaos: 322 campaigns, zero structure', text: 'Took over an account with 322 campaigns from multiple previous media buyers — budget fragmented across dormant campaigns, no clear testing system, no evergreen structure. The account was spending without direction.' },
+      { step: '03 · THE STRATEGY', title: 'ENT + testing layer + blue-collar UGC hooks', text: 'Rebuilt the account into two clean layers: ENT (evergreen scaling) for proven performers and a dedicated [TS] layer to validate creatives before promoting winners. UGC hooks tied to blue-collar identity ("I bought 4 of these in the last 6 months") consistently outperformed branded content.' },
+      { step: '04 · THE RESULT', title: '1,083 purchases · $26 CPP · $47K revenue', text: 'Results over 30 days: 1,083 purchases, $26.19 CPP, $47,273 in revenue from $28,363 in spend. Best single campaign: 471 purchases at $22.71 CPP, 1.97x ROAS.' },
+    ],
+    en: {
+      tag: 'E-commerce · Workwear · USA',
+      headline: '1,083 purchases · $26 CPP · $47K revenue in 30 days.',
+      metrics: [
+        { value: '1,083', label: 'Purchases (30d)' },
+        { value: '$26', label: 'Cost per purchase' },
+        { value: '$47K', label: 'Revenue (30d)' },
+        { value: '$28K', label: 'Ad spend (30d)' },
+      ],
+      story: [
+        { step: '01 · THE BRAND', title: 'Workwear hats for blue-collar workers', text: 'Effing Gear makes bold, attitude-forward headwear for the American blue-collar worker — truckers, contractors, outdoor laborers. Strong UGC potential: their customers are proud repeat buyers who show off the product.' },
+        { step: '02 · THE CHALLENGE', title: 'Inherited chaos: 322 campaigns, zero structure', text: 'Took over an account with 322 campaigns from multiple previous media buyers — budget fragmented across dormant campaigns, no clear testing system, no evergreen structure. The account was spending without direction.' },
+        { step: '03 · THE STRATEGY', title: 'ENT + testing layer + blue-collar UGC hooks', text: 'Rebuilt the account into two clean layers: ENT (evergreen scaling) for proven performers and a dedicated [TS] layer to validate creatives before promoting winners. UGC hooks tied to blue-collar identity ("I bought 4 of these in the last 6 months") consistently outperformed branded content.' },
+        { step: '04 · THE RESULT', title: '1,083 purchases · $26 CPP · $47K revenue', text: 'Results over 30 days: 1,083 purchases, $26.19 CPP, $47,273 in revenue from $28,363 in spend. Best single campaign: 471 purchases at $22.71 CPP, 1.97x ROAS.' },
+      ],
+    },
+    accent: '#c2410c',
+    website: 'https://www.effinggear.com',
+    image: img('/assets/img/eg-cover.png'),
+    logo: img('/assets/img/eg-logo.png'),
+    logoRound: true,
+    resultsLabel: 'Campaign results · Meta Ads Manager',
+    resultsImages: [
+      img('/assets/img/eg-campaigns.png'),
+      img('/assets/img/eg-adsets-roas.png'),
+      img('/assets/img/eg-ugc-creative.png'),
+    ],
+  },
+  {
+    id: 'er',
+    num: '04',
     client: 'Eric Rich',
     tag: 'High-Ticket Coaching · EUA',
     headline: '$34K investidos · 547 calls · produto de $8K.',
@@ -177,7 +223,7 @@ export const cases = [
   },
   {
     id: 'cb',
-    num: '04',
+    num: '05',
     client: 'Cherub Baby',
     tag: 'E-commerce · Austrália',
     headline: 'ROAS 4.79x · AUD $50K/mês em baby products.',
@@ -235,7 +281,7 @@ export const cases = [
   },
   {
     id: 'ks',
-    num: '05',
+    num: '06',
     client: 'KS Metais',
     tag: 'B2B · Industrial',
     headline: 'De $10 por lead para $2,24.',
@@ -300,7 +346,7 @@ export const cases = [
   },
   {
     id: 'pmb',
-    num: '06',
+    num: '07',
     client: 'Pick My Brain',
     tag: 'AI SaaS · Silicon Valley',
     headline: '0 para 500 assinaturas em 3 mercados.',
@@ -365,7 +411,7 @@ export const cases = [
   },
   {
     id: 'mossy',
-    num: '07',
+    num: '08',
     client: 'MOSSY',
     tag: 'Moda · E-commerce',
     headline: 'De R$30K para R$320K/mês.',
@@ -421,7 +467,7 @@ export const cases = [
   },
   {
     id: 'ct',
-    num: '08',
+    num: '09',
     client: 'Casa Tropical',
     tag: 'Lifestyle · Moda Premium',
     headline: '7K para 32K seguidores + ROAS 14x.',
@@ -498,7 +544,7 @@ export const cases = [
   },
   {
     id: 'bloom',
-    num: '09',
+    num: '10',
     client: 'Bloom → Loum',
     tag: 'Moda · Rebranding',
     headline: 'ROAS 19x · R$686K em conversões.',
@@ -555,7 +601,7 @@ export const cases = [
   },
   {
     id: 'neg',
-    num: '10',
+    num: '11',
     client: 'Negãozin',
     tag: 'Creator · TikTok',
     headline: '9K para 136K seguidores · 19,8M views.',
@@ -604,7 +650,7 @@ export const cases = [
   },
   {
     id: 'rp',
-    num: '11',
+    num: '12',
     client: 'Rotoplast',
     tag: 'B2B · Industrial',
     headline: 'CPL de $1,34 com leads qualificados.',
@@ -650,7 +696,7 @@ export const cases = [
   },
   {
     id: 'tr',
-    num: '12',
+    num: '13',
     client: 'Traffic Raptors',
     tag: 'Nutraceuticals · EUA / CA / EU / AU',
     headline: 'ROAS 3.4x a 5.3x em 4 mercados.',

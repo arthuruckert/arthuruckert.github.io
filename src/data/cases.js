@@ -755,5 +755,50 @@ export const cases = [
       img('/assets/img/tr_video_6.mp4'),
       img('/assets/img/tr_video_7.mp4'),
     ],
+  },
+  {
+    id: 'infamous',
+    num: '14',
+    client: 'Infamous Paintball',
+    tag: 'E-commerce · Paintball · USA',
+    headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
+    metrics: [
+      { value: '23x', label: 'Avg ROAS (30d)' },
+      { value: '$8.79', label: 'Avg CPP' },
+      { value: '45x', label: 'Best campaign ROAS' },
+      { value: '1,116', label: 'Purchases (30d)' },
+    ],
+    story: [
+      { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
+      { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
+      { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
+      { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+    ],
+    en: {
+      tag: 'E-commerce · Paintball · USA',
+      headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
+      metrics: [
+        { value: '23x', label: 'Avg ROAS (30d)' },
+        { value: '$8.79', label: 'Avg CPP' },
+        { value: '45x', label: 'Best campaign ROAS' },
+        { value: '1,116', label: 'Purchases (30d)' },
+      ],
+      story: [
+        { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
+        { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
+        { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
+        { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+      ],
+    },
+    accent: '#c8f510',
+    instagram: 'https://www.instagram.com/infamouspaintball/',
+    image: img('/assets/img/infamous-cover.png'),
+    resultsLabel: 'Campaign results · Meta Ads Manager',
+    resultsImages: [
+      img('/assets/img/infamous-campaigns.png'),
+      img('/assets/img/infamous-campaigns-roas.png'),
+      img('/assets/img/infamous-7d.png'),
+      img('/assets/img/infamous-creative.png'),
+    ],
   }
 ]

@@ -3,8 +3,53 @@ const img = (p) => `${BASE}${p.replace(/^\//, '')}`
 
 export const cases = [
   {
-    id: 'smoovee',
+    id: 'infamous',
     num: '01',
+    client: 'Infamous Paintball',
+    tag: 'E-commerce · Paintball · USA',
+    headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
+    metrics: [
+      { value: '23x', label: 'Avg ROAS (30d)' },
+      { value: '$8.79', label: 'Avg CPP' },
+      { value: '45x', label: 'Best campaign ROAS' },
+      { value: '1,116', label: 'Purchases (30d)' },
+    ],
+    story: [
+      { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
+      { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
+      { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
+      { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+    ],
+    en: {
+      tag: 'E-commerce · Paintball · USA',
+      headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
+      metrics: [
+        { value: '23x', label: 'Avg ROAS (30d)' },
+        { value: '$8.79', label: 'Avg CPP' },
+        { value: '45x', label: 'Best campaign ROAS' },
+        { value: '1,116', label: 'Purchases (30d)' },
+      ],
+      story: [
+        { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
+        { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
+        { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
+        { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+      ],
+    },
+    accent: '#c8f510',
+    instagram: 'https://www.instagram.com/infamouspaintball/',
+    image: img('/assets/img/infamous-cover.png'),
+    resultsLabel: 'Campaign results · Meta Ads Manager',
+    resultsImages: [
+      img('/assets/img/infamous-campaigns.png'),
+      img('/assets/img/infamous-campaigns-roas.png'),
+      img('/assets/img/infamous-7d.png'),
+      img('/assets/img/infamous-creative.png'),
+    ],
+  },
+  {
+    id: 'smoovee',
+    num: '02',
     client: 'Smoovee',
     tag: 'E-commerce · Kitchen · USA',
     headline: 'Google 11.57x ROAS · 117 purchases · sold out.',
@@ -54,7 +99,7 @@ export const cases = [
   },
   {
     id: 'trestique',
-    num: '02',
+    num: '03',
     client: 'Trestique',
     tag: 'Beauty · E-commerce · USA',
     headline: '$812K YTD · 1.90x ROAS · $309K net profit · +161% growth.',
@@ -116,7 +161,7 @@ export const cases = [
   },
   {
     id: 'eg',
-    num: '03',
+    num: '04',
     client: 'Effing Gear',
     tag: 'E-commerce · Workwear · USA',
     headline: '1,083 purchases · $26 CPP · $47K revenue in 30 days.',
@@ -165,7 +210,7 @@ export const cases = [
   },
   {
     id: 'er',
-    num: '04',
+    num: '05',
     client: 'Eric Rich',
     tag: 'High-Ticket Coaching · EUA',
     headline: '$34K investidos · 547 calls · produto de $8K.',
@@ -226,7 +271,7 @@ export const cases = [
   },
   {
     id: 'cb',
-    num: '05',
+    num: '06',
     client: 'Cherub Baby',
     tag: 'E-commerce · Austrália',
     headline: 'ROAS 4.79x · AUD $50K/mês em baby products.',
@@ -284,7 +329,7 @@ export const cases = [
   },
   {
     id: 'ks',
-    num: '06',
+    num: '07',
     client: 'KS Metais',
     tag: 'B2B · Industrial',
     headline: 'De $10 por lead para $2,24.',
@@ -349,7 +394,7 @@ export const cases = [
   },
   {
     id: 'pmb',
-    num: '07',
+    num: '08',
     client: 'Pick My Brain',
     tag: 'AI SaaS · Silicon Valley',
     headline: '0 para 500 assinaturas em 3 mercados.',
@@ -414,7 +459,7 @@ export const cases = [
   },
   {
     id: 'mossy',
-    num: '08',
+    num: '09',
     client: 'MOSSY',
     tag: 'Moda · E-commerce',
     headline: 'De R$30K para R$320K/mês.',
@@ -470,7 +515,7 @@ export const cases = [
   },
   {
     id: 'ct',
-    num: '09',
+    num: '10',
     client: 'Casa Tropical',
     tag: 'Lifestyle · Moda Premium',
     headline: '7K para 32K seguidores + ROAS 14x.',
@@ -547,7 +592,7 @@ export const cases = [
   },
   {
     id: 'bloom',
-    num: '10',
+    num: '11',
     client: 'Bloom → Loum',
     tag: 'Moda · Rebranding',
     headline: 'ROAS 19x · R$686K em conversões.',
@@ -604,7 +649,7 @@ export const cases = [
   },
   {
     id: 'neg',
-    num: '11',
+    num: '12',
     client: 'Negãozin',
     tag: 'Creator · TikTok',
     headline: '9K para 136K seguidores · 19,8M views.',
@@ -653,7 +698,7 @@ export const cases = [
   },
   {
     id: 'rp',
-    num: '12',
+    num: '13',
     client: 'Rotoplast',
     tag: 'B2B · Industrial',
     headline: 'CPL de $1,34 com leads qualificados.',
@@ -699,7 +744,7 @@ export const cases = [
   },
   {
     id: 'tr',
-    num: '13',
+    num: '14',
     client: 'Traffic Raptors',
     tag: 'Nutraceuticals · EUA / CA / EU / AU',
     headline: 'ROAS 3.4x a 5.3x em 4 mercados.',
@@ -756,49 +801,4 @@ export const cases = [
       img('/assets/img/tr_video_7.mp4'),
     ],
   },
-  {
-    id: 'infamous',
-    num: '14',
-    client: 'Infamous Paintball',
-    tag: 'E-commerce · Paintball · USA',
-    headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
-    metrics: [
-      { value: '23x', label: 'Avg ROAS (30d)' },
-      { value: '$8.79', label: 'Avg CPP' },
-      { value: '45x', label: 'Best campaign ROAS' },
-      { value: '1,116', label: 'Purchases (30d)' },
-    ],
-    story: [
-      { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
-      { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
-      { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
-      { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
-    ],
-    en: {
-      tag: 'E-commerce · Paintball · USA',
-      headline: '1,116 purchases · $8.79 CPP · 23x ROAS in 30 days.',
-      metrics: [
-        { value: '23x', label: 'Avg ROAS (30d)' },
-        { value: '$8.79', label: 'Avg CPP' },
-        { value: '45x', label: 'Best campaign ROAS' },
-        { value: '1,116', label: 'Purchases (30d)' },
-      ],
-      story: [
-        { step: '01 · THE BRAND', title: 'Premium competitive paintball gear', text: 'Infamous Paintball is a top-tier competitive paintball brand selling high-AOV protective gear, markers, apparel, and accessories to serious players across the USA. High product prices ($100–$500+) create naturally strong ROAS potential for paid social.' },
-        { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
-        { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
-        { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
-      ],
-    },
-    accent: '#c8f510',
-    instagram: 'https://www.instagram.com/infamouspaintball/',
-    image: img('/assets/img/infamous-cover.png'),
-    resultsLabel: 'Campaign results · Meta Ads Manager',
-    resultsImages: [
-      img('/assets/img/infamous-campaigns.png'),
-      img('/assets/img/infamous-campaigns-roas.png'),
-      img('/assets/img/infamous-7d.png'),
-      img('/assets/img/infamous-creative.png'),
-    ],
-  }
 ]

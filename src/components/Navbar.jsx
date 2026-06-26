@@ -81,19 +81,6 @@ export default function Navbar() {
                 onMouseLeave={e => e.target.style.color = scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)'}
               >{label}</a>
             ))}
-            <Magnetic>
-              <a href="#contato" style={{
-                background: scrolled ? 'var(--text)' : 'rgba(255,255,255,0.12)',
-                border: scrolled ? 'none' : '1px solid rgba(255,255,255,0.25)',
-                color: scrolled ? 'var(--bg)' : '#fff',
-                padding: '8px 20px', borderRadius: 100, fontSize: 13, fontWeight: 700,
-                textDecoration: 'none', transition: 'all 0.3s',
-                backdropFilter: scrolled ? 'none' : 'blur(8px)',
-              }}
-                onMouseEnter={e => { e.currentTarget.style.opacity = '0.85' }}
-                onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}
-              >{cta}</a>
-            </Magnetic>
           </nav>
 
           <button onClick={() => setOpen(o => !o)} className="burger-btn" style={{

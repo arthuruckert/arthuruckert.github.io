@@ -119,20 +119,6 @@ export default function Hero() {
                 {tr.ctaPrimary}
               </a>
             </Magnetic>
-            <Magnetic>
-              <a href="#contato" style={{
-                border: '1px solid var(--border)', color: 'var(--muted)',
-                padding: '12px 28px', borderRadius: 100,
-                fontSize: 13, fontWeight: 500,
-                textDecoration: 'none', display: 'inline-block',
-                transition: 'all 0.2s',
-              }}
-                onMouseEnter={e => { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)' }}
-                onMouseLeave={e => { e.currentTarget.style.color = 'var(--muted)'; e.currentTarget.style.borderColor = 'var(--border)' }}
-              >
-                {tr.ctaSecondary}
-              </a>
-            </Magnetic>
           </div>
 
           {/* Stats row */}

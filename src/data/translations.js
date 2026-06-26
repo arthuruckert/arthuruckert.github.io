@@ -86,6 +86,10 @@ export const translations = {
           desc: 'Visão de crescimento além do anúncio. Análise de funil, CPA target, LTV e estratégia de escala. Ideal para marcas que querem crescer de R$30K para R$300K/mês.',
         },
         {
+          title: 'TikTok Ads',
+          desc: 'Campanhas de performance no TikTok para aquisição de novos clientes. UGC nativo, hooks curtos e criativos otimizados para o feed. Ideal para marcas com produto visual e público jovem.',
+        },
+        {
           title: 'Google Ads',
           desc: 'Search, Display e Performance Max para complementar sua estratégia de paid social. Captura demanda existente e amplifica o que o Meta já aqueceu.',
         },
@@ -221,6 +225,10 @@ export const translations = {
         {
           title: 'Growth Strategy',
           desc: 'Growth vision beyond the ad. Funnel analysis, CPA target, LTV, and scale strategy. Ideal for brands looking to grow from $10K to $100K/month.',
+        },
+        {
+          title: 'TikTok Ads',
+          desc: 'Performance campaigns on TikTok for new customer acquisition. Native UGC, short hooks, and creatives optimized for the feed. Ideal for brands with visual products and younger audiences.',
         },
         {
           title: 'Google Ads',

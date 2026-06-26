@@ -15,7 +15,7 @@ export const translations = {
       roleTag: 'Media Buyer · Meta Ads Specialist',
       description:
         'Gosto de entender o negócio antes de tocar em qualquer campanha. A partir daí, construo criativos que educam antes de converter, estruturo funis que sustentam o ROAS mesmo com o budget crescendo e tomo decisões com base em dados reais.',
-      secondary: '4+ anos · 50+ marcas · $250K+ USD/mês gerenciados · Brasil, EUA, Europa.',
+      secondary: '4+ anos · 50+ marcas · $250K+ USD/mês gerenciados · EUA, Europa.',
       ctaPrimary: 'Ver cases →',
       ctaSecondary: 'Trabalhar juntos',
       stats: [
@@ -156,7 +156,7 @@ export const translations = {
       roleTag: 'Media Buyer · Meta Ads Specialist',
       description:
         'I like to understand the business before touching any campaign. From there, I build creatives that educate before converting, structure funnels that sustain ROAS even as budget scales, and make decisions based on real data.',
-      secondary: '4+ years · 50+ brands · $250K+ USD/month managed · Brazil, USA, Europe.',
+      secondary: '4+ years · 50+ brands · $250K+ USD/month managed · USA, Europe.',
       ctaPrimary: 'View cases →',
       ctaSecondary: 'Work together',
       stats: [

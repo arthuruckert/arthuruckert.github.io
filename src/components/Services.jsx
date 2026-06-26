@@ -21,11 +21,16 @@ const servicesMeta = [
   },
   {
     num: '04',
-    tags: ['Search', 'Shopping'],
-    accent: '#10b981',
+    tags: ['UGC', 'Short-form', 'Feed Ads', 'Creator Hooks'],
+    accent: '#ff0050',
   },
   {
     num: '05',
+    tags: ['Search', 'Shopping', 'Performance Max'],
+    accent: '#10b981',
+  },
+  {
+    num: '06',
     tags: ['ChatGPT', 'Make.com', 'Automation', 'Reporting'],
     accent: '#f59e0b',
   },

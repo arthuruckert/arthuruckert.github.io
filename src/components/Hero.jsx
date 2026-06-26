@@ -25,28 +25,8 @@ export default function Hero() {
         position: 'relative', zIndex: 1,
       }}>
 
-        {/* Top: status + location */}
-        <div className="hero-top-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              border: '1px solid var(--border)', borderRadius: 100,
-              padding: '5px 14px',
-              background: 'rgba(255,255,255,0.04)',
-            }}
-          >
-            <span style={{
-              width: 6, height: 6, borderRadius: '50%', background: '#22c55e',
-              boxShadow: '0 0 8px rgba(34,197,94,0.9)', display: 'inline-block',
-            }} />
-            <span style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--muted)', fontWeight: 600 }}>
-              {tr.status}
-            </span>
-          </motion.div>
-
+        {/* Top: location */}
+        <div className="hero-top-row" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -374,16 +374,23 @@ export default function LeadForm() {
 
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.65, maxWidth: 360, margin: '0 auto 28px', fontWeight: 300 }}
+            style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.65, maxWidth: 360, margin: '0 auto 16px', fontWeight: 300 }}
           >
             Descubra por que seus anúncios não estão convertindo — e o que mudar agora.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
+            style={{ fontSize: 12, color: 'var(--subtle)', letterSpacing: '0.05em', marginBottom: 28 }}
+          >
+            +1 312 675 1703 · SMS / WhatsApp only
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
             style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}
           >
-            {[['50+', 'marcas atendidas'], ['$200k+', 'adspend/mês'], ['8+', 'cases comprovados']].map(([n, l]) => (
+            {[['50+', 'marcas atendidas'], ['$250k+', 'adspend/mês'], ['8+', 'cases comprovados']].map(([n, l]) => (
               <div key={l} style={{ textAlign: 'center' }}>
                 <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 20, fontWeight: 800, color: 'var(--accent)', letterSpacing: '-0.02em' }}>{n}</div>
                 <div style={{ fontSize: 11, color: 'var(--subtle)', marginTop: 2, fontWeight: 500, letterSpacing: '0.05em' }}>{l}</div>

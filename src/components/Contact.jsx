@@ -83,7 +83,7 @@ export default function Contact() {
         >
           <Magnetic>
             <a
-              href="https://wa.me/5551999999999?text=Oi%20Arthur%2C%20quero%20conversar%20sobre%20Meta%20Ads"
+              href="https://wa.me/13126751703?text=Hi%20Arthur%2C%20I%20want%20to%20talk%20about%20Meta%20Ads"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -134,6 +134,9 @@ export default function Contact() {
           >
             pe.ruckert@gmail.com
           </a>
+          <div style={{ marginTop: 10, fontSize: 12, color: 'var(--subtle)', letterSpacing: '0.06em' }}>
+            +1 312 675 1703 · SMS / WhatsApp only
+          </div>
         </motion.div>
 
         {/* Social strip */}

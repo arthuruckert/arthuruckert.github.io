@@ -22,9 +22,14 @@ export default function Footer() {
         maxWidth: 1200, margin: '0 auto',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16,
       }}>
-        <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '-0.02em', fontStyle: 'italic' }}>
-          Arthur <span style={{ fontWeight: 300, fontStyle: 'normal' }}>Rückert</span>
-        </span>
+        <div>
+          <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '-0.02em', fontStyle: 'italic' }}>
+            Arthur <span style={{ fontWeight: 300, fontStyle: 'normal' }}>Rückert</span>
+          </span>
+          <div style={{ fontSize: 11, color: 'var(--subtle)', marginTop: 4, letterSpacing: '0.04em' }}>
+            pe.ruckert@gmail.com · +1 312 675 1703 (SMS / WhatsApp only)
+          </div>
+        </div>
         <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center' }}>
           <a href="https://instagram.com/ruckert_" target="_blank" rel="noopener noreferrer"
             style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 6, transition: 'color 0.2s' }}

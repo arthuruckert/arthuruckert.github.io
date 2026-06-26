@@ -70,11 +70,13 @@ export default function Navbar() {
 
           <nav style={{ display: 'flex', alignItems: 'center', gap: 40 }} className="desktop-nav">
             {links.map(([href, label]) => (
-              <a key={href} href={href} style={{
-                color: scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)',
-                fontSize: 13, fontWeight: 500,
-                textDecoration: 'none', transition: 'color 0.2s',
-              }}
+              <a key={href} href={href}
+                {...(href.endsWith('.vcf') ? { download: true } : {})}
+                style={{
+                  color: scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)',
+                  fontSize: 13, fontWeight: 500,
+                  textDecoration: 'none', transition: 'color 0.2s',
+                }}
                 onMouseEnter={e => e.target.style.color = 'var(--text)'}
                 onMouseLeave={e => e.target.style.color = scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)'}
               >{label}</a>
@@ -126,6 +128,7 @@ export default function Navbar() {
               <motion.a
                 key={href}
                 href={href}
+                {...(href.endsWith('.vcf') ? { download: true } : {})}
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -15,11 +15,11 @@ export const translations = {
       roleTag: 'Media Buyer · Meta Ads Specialist',
       description:
         'Gosto de entender o negócio antes de tocar em qualquer campanha. A partir daí, construo criativos que educam antes de converter, estruturo funis que sustentam o ROAS mesmo com o budget crescendo e tomo decisões com base em dados reais.',
-      secondary: '4+ anos · 50+ marcas · $200K+ USD/mês gerenciados · Brasil, EUA, Europa.',
+      secondary: '4+ anos · 50+ marcas · $250K+ USD/mês gerenciados · Brasil, EUA, Europa.',
       ctaPrimary: 'Ver cases →',
       ctaSecondary: 'Trabalhar juntos',
       stats: [
-        { value: '$200K+', badge: 'USD', label: 'Adspend/mês' },
+        { value: '$250K+', badge: 'USD', label: 'Adspend/mês' },
         { value: '79%', badge: '', label: 'Redução CPL' },
         { value: '50+', badge: '', label: 'Marcas' },
       ],
@@ -107,7 +107,7 @@ export const translations = {
       stats: [
         { value: '4+', label: 'Anos de experiência' },
         { value: '50+', label: 'Marcas atendidas' },
-        { value: '$200K USD', label: 'Adspend/mês no pico' },
+        { value: '$250K USD', label: 'Adspend/mês no pico' },
         { value: '3', label: 'Continentes' },
       ],
     },
@@ -152,12 +152,12 @@ export const translations = {
       roleTag: 'Media Buyer · Meta Ads Specialist',
       description:
         'I like to understand the business before touching any campaign. From there, I build creatives that educate before converting, structure funnels that sustain ROAS even as budget scales, and make decisions based on real data.',
-      secondary: '4+ years · 50+ brands · $200K+ USD/month managed · Brazil, USA, Europe.',
+      secondary: '4+ years · 50+ brands · $250K+ USD/month managed · Brazil, USA, Europe.',
       ctaPrimary: 'View cases →',
       ctaSecondary: 'Work together',
       stats: [
-        { value: '$200K+', badge: 'USD', label: 'Adspend/mo' },
-        { value: '$1M+', badge: '', label: 'E-comm revenue' },
+        { value: '$250K+', badge: 'USD', label: 'Adspend/mo' },
+        { value: '$3M+', badge: '', label: 'E-comm revenue' },
         { value: '50+', badge: '', label: 'Brands' },
       ],
       scroll: 'Scroll ↓',
@@ -244,7 +244,7 @@ export const translations = {
       stats: [
         { value: '4+', label: 'Years of experience' },
         { value: '50+', label: 'Brands served' },
-        { value: '$200K USD', label: 'Peak adspend/mo' },
+        { value: '$250K USD', label: 'Peak adspend/mo' },
         { value: '3', label: 'Continents' },
       ],
     },

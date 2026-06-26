@@ -5,7 +5,7 @@ import { t } from '../data/translations'
 const cardsMeta = [
   { size: 'large', value: '79%', accent: '#e63946' },
   { size: 'small', value: 'ROAS 19x', accent: '#8b5cf6' },
-  { size: 'small', value: '$200K+', badge: 'USD', accent: '#f59e0b' },
+  { size: 'small', value: '$250K+', badge: 'USD', accent: '#f59e0b' },
   { size: 'medium', value: '0 → 500', accent: '#3b82f6' },
   { size: 'medium', value: 'ROAS 10x', accent: '#10b981' },
   { size: 'small', value: '19,8M', accent: '#06b6d4' },

@@ -15,7 +15,7 @@ export const translations = {
       roleTags: ['Media Buyer', 'Meta Ads', 'TikTok Ads', 'Google Ads'],
       description:
         'Gosto de entender o negócio antes de tocar em qualquer campanha. A partir daí, construo criativos que educam antes de converter, estruturo funis que sustentam o ROAS mesmo com o budget crescendo e tomo decisões com base em dados reais.',
-      secondary: '4+ anos · 50+ marcas · $250K+ USD/mês gerenciados · EUA, Europa.',
+      secondary: '4+ anos · 50+ marcas · $250K+ monthly ad spend · EUA, Europa.',
       ctaPrimary: 'Ver cases →',
       ctaSecondary: 'Trabalhar juntos',
       stats: [
@@ -156,7 +156,7 @@ export const translations = {
       roleTags: ['Media Buyer', 'Meta Ads', 'TikTok Ads', 'Google Ads'],
       description:
         'I like to understand the business before touching any campaign. From there, I build creatives that educate before converting, structure funnels that sustain ROAS even as budget scales, and make decisions based on real data.',
-      secondary: '4+ years · 50+ brands · $250K+ USD/month managed · USA, Europe.',
+      secondary: '4+ years · 50+ brands · $250K+ monthly ad spend · USA, Europe.',
       ctaPrimary: 'View cases →',
       ctaSecondary: 'Work together',
       stats: [

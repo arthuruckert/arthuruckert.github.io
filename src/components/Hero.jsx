@@ -25,20 +25,6 @@ export default function Hero() {
         position: 'relative', zIndex: 1,
       }}>
 
-        {/* Top: location */}
-        <div className="hero-top-row" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            style={{ textAlign: 'right' }}
-          >
-            <div style={{ fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--muted)' }}>
-              {tr.location}
-            </div>
-          </motion.div>
-        </div>
-
         {/* Center: big name */}
         <div>
           <div style={{ overflow: 'hidden', marginBottom: 6 }}>

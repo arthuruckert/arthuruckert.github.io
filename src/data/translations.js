@@ -4,7 +4,7 @@ export const translations = {
       links: [
         ['#cases', 'Cases'],
         ['#sobre', 'Serviços'],
-        ['/arthur-ruckert.vcf', 'Contato'],
+        ['#contact-modal', 'Contato'],
       ],
       cta: 'Trabalhar juntos',
     },
@@ -145,7 +145,7 @@ export const translations = {
       links: [
         ['#cases', 'Cases'],
         ['#sobre', 'Services'],
-        ['/arthur-ruckert.vcf', 'Contact'],
+        ['#contact-modal', 'Contact'],
       ],
       cta: 'Work together',
     },

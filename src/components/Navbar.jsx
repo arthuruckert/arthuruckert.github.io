@@ -7,6 +7,7 @@ import { t } from '../data/translations'
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [contactOpen, setContactOpen] = useState(false)
   const { lang } = useLanguage()
 
   const links = t(lang, 'navbar.links')
@@ -70,12 +71,12 @@ export default function Navbar() {
 
           <nav style={{ display: 'flex', alignItems: 'center', gap: 40 }} className="desktop-nav">
             {links.map(([href, label]) => (
-              <a key={href} href={href}
-                {...(href.endsWith('.vcf') ? { download: true } : {})}
+              <a key={href} href={href === '#contact-modal' ? undefined : href}
+                onClick={href === '#contact-modal' ? (e) => { e.preventDefault(); setContactOpen(true) } : undefined}
                 style={{
                   color: scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)',
                   fontSize: 13, fontWeight: 500,
-                  textDecoration: 'none', transition: 'color 0.2s',
+                  textDecoration: 'none', transition: 'color 0.2s', cursor: 'pointer',
                 }}
                 onMouseEnter={e => e.target.style.color = 'var(--text)'}
                 onMouseLeave={e => e.target.style.color = scrolled ? 'var(--muted)' : 'rgba(255,255,255,0.75)'}
@@ -114,9 +115,8 @@ export default function Navbar() {
             {links.map(([href, label], i) => (
               <motion.a
                 key={href}
-                href={href}
-                {...(href.endsWith('.vcf') ? { download: true } : {})}
-                onClick={() => setOpen(false)}
+                href={href === '#contact-modal' ? undefined : href}
+                onClick={href === '#contact-modal' ? (e) => { e.preventDefault(); setOpen(false); setContactOpen(true) } : () => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
@@ -126,6 +126,74 @@ export default function Navbar() {
                 }}
               >{label}</motion.a>
             ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {contactOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setContactOpen(false)}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 200,
+              background: 'rgba(8,8,8,0.85)', backdropFilter: 'blur(20px)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 12, scale: 0.97 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              onClick={e => e.stopPropagation()}
+              style={{
+                background: '#111', border: '1px solid var(--border)',
+                borderRadius: 20, padding: '48px 40px',
+                maxWidth: 400, width: '90%', textAlign: 'center',
+                position: 'relative',
+              }}
+            >
+              <button onClick={() => setContactOpen(false)} style={{
+                position: 'absolute', top: 16, right: 16,
+                background: 'none', border: 'none', color: 'var(--subtle)',
+                fontSize: 20, cursor: 'pointer', lineHeight: 1, padding: 4,
+              }}>×</button>
+
+              <p style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent)', fontWeight: 700, marginBottom: 20 }}>Contact</p>
+
+              <h3 style={{ fontSize: 28, fontWeight: 900, letterSpacing: '-0.03em', color: 'var(--text)', marginBottom: 32 }}>
+                Arthur Rückert
+              </h3>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <a href="mailto:pe.ruckert@gmail.com" style={{
+                  display: 'block', padding: '16px 24px', borderRadius: 12,
+                  border: '1px solid var(--border)', textDecoration: 'none',
+                  transition: 'border-color 0.2s, background 0.2s',
+                }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)' }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'transparent' }}
+                >
+                  <div style={{ fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--subtle)', marginBottom: 4 }}>Email</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)' }}>pe.ruckert@gmail.com</div>
+                </a>
+
+                <a href="https://wa.me/13126751703" target="_blank" rel="noopener noreferrer" style={{
+                  display: 'block', padding: '16px 24px', borderRadius: 12,
+                  border: '1px solid var(--border)', textDecoration: 'none',
+                  transition: 'border-color 0.2s, background 0.2s',
+                }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)' }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'transparent' }}
+                >
+                  <div style={{ fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--subtle)', marginBottom: 4 }}>WhatsApp · SMS only</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)' }}>+1 312 675 1703</div>
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

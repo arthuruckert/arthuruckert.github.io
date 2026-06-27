@@ -78,20 +78,20 @@ export const translations = {
           desc: 'Campanhas de performance no Facebook e Instagram: aquisição, retenção e ROAS máximo. Estrutura de funil completa: topo, meio e fundo. Criativos testados em escala.',
         },
         {
-          title: 'Estratégia de Criativos',
-          desc: 'Criativos que educam antes de converter. Hooks, estruturas narrativas e variações baseadas em dados. Do briefing ao script ao resultado no Ads Manager.',
-        },
-        {
-          title: 'Growth Strategy',
-          desc: 'Visão de crescimento além do anúncio. Análise de funil, CPA target, LTV e estratégia de escala. Ideal para marcas que querem crescer de R$30K para R$300K/mês.',
-        },
-        {
           title: 'TikTok Ads',
           desc: 'Campanhas de performance no TikTok para aquisição de novos clientes. UGC nativo, hooks curtos e criativos otimizados para o feed. Ideal para marcas com produto visual e público jovem.',
         },
         {
           title: 'Google Ads',
           desc: 'Search, Display e Performance Max para complementar sua estratégia de paid social. Captura demanda existente e amplifica o que o Meta já aqueceu.',
+        },
+        {
+          title: 'Estratégia de Criativos',
+          desc: 'Criativos que educam antes de converter. Hooks, estruturas narrativas e variações baseadas em dados. Do briefing ao script ao resultado no Ads Manager.',
+        },
+        {
+          title: 'Growth Strategy',
+          desc: 'Visão de crescimento além do anúncio. Análise de funil, CPA target, LTV e estratégia de escala. Ideal para marcas que querem crescer de R$30K para R$300K/mês.',
         },
         {
           title: 'AI & Automação',
@@ -219,20 +219,20 @@ export const translations = {
           desc: 'Performance campaigns on Facebook and Instagram: acquisition, retention, and maximum ROAS. Complete funnel structure: top, mid, and bottom. Creatives tested at scale.',
         },
         {
-          title: 'Creative Strategy',
-          desc: 'Creatives that educate before converting. Hooks, narrative frameworks, and data-driven variations. From brief to script to Ads Manager results.',
-        },
-        {
-          title: 'Growth Strategy',
-          desc: 'Growth vision beyond the ad. Funnel analysis, CPA target, LTV, and scale strategy. Ideal for brands looking to grow from $10K to $100K/month.',
-        },
-        {
           title: 'TikTok Ads',
           desc: 'Performance campaigns on TikTok for new customer acquisition. Native UGC, short hooks, and creatives optimized for the feed. Ideal for brands with visual products and younger audiences.',
         },
         {
           title: 'Google Ads',
           desc: 'Search, Display, and Performance Max to complement your paid social strategy. Capture existing demand and amplify what Meta already warmed up.',
+        },
+        {
+          title: 'Creative Strategy',
+          desc: 'Creatives that educate before converting. Hooks, narrative frameworks, and data-driven variations. From brief to script to Ads Manager results.',
+        },
+        {
+          title: 'Growth Strategy',
+          desc: 'Growth vision beyond the ad. Funnel analysis, CPA target, LTV, and scale strategy. Ideal for brands looking to grow from $10K to $100K/month.',
         },
         {
           title: 'AI & Automation',

@@ -11,23 +11,23 @@ const servicesMeta = [
   },
   {
     num: '02',
-    tags: ['UGC', 'Copywriting', 'A/B Testing', 'Video Ads'],
-    accent: '#8b5cf6',
-  },
-  {
-    num: '03',
-    tags: ['Funnel', 'LTV', 'CPA', 'Scale'],
-    accent: '#3b82f6',
-  },
-  {
-    num: '04',
     tags: ['UGC', 'Short-form', 'Feed Ads', 'Creator Hooks'],
     accent: '#ff0050',
   },
   {
-    num: '05',
+    num: '03',
     tags: ['Search', 'Shopping', 'Performance Max'],
     accent: '#10b981',
+  },
+  {
+    num: '04',
+    tags: ['UGC', 'Copywriting', 'A/B Testing', 'Video Ads'],
+    accent: '#8b5cf6',
+  },
+  {
+    num: '05',
+    tags: ['Funnel', 'LTV', 'CPA', 'Scale'],
+    accent: '#3b82f6',
   },
   {
     num: '06',

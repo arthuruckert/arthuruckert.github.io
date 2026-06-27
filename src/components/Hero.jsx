@@ -61,15 +61,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
-            style={{ marginTop: 28 }}
+            style={{ marginTop: 28, display: 'flex', gap: 8, flexWrap: 'wrap' }}
           >
-            <span style={{
-              fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase',
-              color: 'var(--muted)', fontWeight: 600,
-              borderBottom: '1px solid var(--border)', paddingBottom: 4,
-            }}>
-              {tr.roleTag}
-            </span>
+            {tr.roleTags.map((tag, i) => (
+              <span key={tag} style={{
+                fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase',
+                fontWeight: 700,
+                padding: '5px 14px', borderRadius: 100,
+                border: `1px solid ${i === 0 ? 'var(--accent)' : 'var(--border)'}`,
+                color: i === 0 ? 'var(--accent)' : 'var(--subtle)',
+                background: i === 0 ? 'rgba(200,168,74,0.08)' : 'transparent',
+              }}>
+                {tag}
+              </span>
+            ))}
           </motion.div>
         </div>
 

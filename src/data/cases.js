@@ -11,7 +11,7 @@ export const cases = [
     metrics: [
       { value: '23x', label: 'Avg ROAS (30d)' },
       { value: '$8.79', label: 'Avg CPP' },
-      { value: '45x', label: 'Best campaign ROAS' },
+      { value: '148x', label: 'Best creative ROAS' },
       { value: '1,116', label: 'Purchases (30d)' },
     ],
     story: [
@@ -19,6 +19,7 @@ export const cases = [
       { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
       { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
       { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+      { step: '05 · THE SCALE', title: '54 campaigns. 770 ads. Still compounding.', text: 'Six months later, the account runs 54 active campaigns across 770 ads. June 2026: IP Remarketing holds 43.44x ROAS with 212 purchases and $57,543 in revenue. Kaizen Lifestyle Apparel: 164 purchases at $8.21 CPP. Best creative: Sale Extended Image at $1.77 CPP and 148.95x ROAS. Storm VLT Backpack: 98 purchases, $6.86 CPP, 36.58x ROAS. The Kaizen structure keeps each product category scaling independently without internal budget competition.' },
     ],
     en: {
       tag: 'E-commerce · Paintball · USA',
@@ -26,7 +27,7 @@ export const cases = [
       metrics: [
         { value: '23x', label: 'Avg ROAS (30d)' },
         { value: '$8.79', label: 'Avg CPP' },
-        { value: '45x', label: 'Best campaign ROAS' },
+        { value: '148x', label: 'Best creative ROAS' },
         { value: '1,116', label: 'Purchases (30d)' },
       ],
       story: [
@@ -34,6 +35,7 @@ export const cases = [
         { step: '02 · THE STRUCTURE', title: 'Kaizen methodology — one campaign per product', text: 'Built the account around the Kaizen naming system: one campaign per product category (Harnesses, Protection, Triggers, Goggles, Cleats, Apparel, Bags). Each product gets its own testing environment, budget, and creative set — eliminating internal competition and keeping optimization signals clean.' },
         { step: '03 · THE STRATEGY', title: 'Kaizen prospecting + IP retargeting full funnel', text: 'Two-layer structure: Kaizen campaigns drive new customer acquisition per product, while IP (Infamous Paintball) campaigns close warm traffic via remarketing and full-funnel retargeting. The bag retargeting campaign hit 45.50x ROAS by capturing high-intent visitors who had already shown purchase intent.' },
         { step: '04 · THE RESULT', title: '1,116 purchases · $8.79 CPP · 23x ROAS', text: '30-day results across active campaigns: 1,116 purchases, $8.79 avg CPP, 23x avg ROAS, $229K in attributed revenue from $9.8K in spend. Best: IP Remarketing at 42.37x ROAS (226 purchases, $5.89 CPP), Lifestyle Apparel at 180 purchases for $27K revenue, Full Funnel Bag at 45.50x ROAS.' },
+        { step: '05 · THE SCALE', title: '54 campaigns. 770 ads. Still compounding.', text: 'Six months later, the account runs 54 active campaigns across 770 ads. June 2026: IP Remarketing holds 43.44x ROAS with 212 purchases and $57,543 in revenue. Kaizen Lifestyle Apparel: 164 purchases at $8.21 CPP. Best creative: Sale Extended Image at $1.77 CPP and 148.95x ROAS. Storm VLT Backpack: 98 purchases, $6.86 CPP, 36.58x ROAS. The Kaizen structure keeps each product category scaling independently without internal budget competition.' },
       ],
     },
     accent: '#c8f510',

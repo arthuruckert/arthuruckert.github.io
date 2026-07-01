@@ -170,31 +170,28 @@ export default function CaseModal({ c, onClose }) {
         onClick={onClose}
         style={{
           position: 'fixed', inset: 0, zIndex: 9000,
-          background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(16px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          padding: 24,
+          background: '#0e0e0e',
+          display: 'flex', alignItems: 'stretch', justifyContent: 'center',
         }}
       >
         <motion.div
           ref={scrollRef}
-          initial={{ opacity: 0, scale: 0.96, y: 28 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 12 }}
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 16 }}
           transition={{ type: 'spring', stiffness: 280, damping: 28 }}
           onClick={e => e.stopPropagation()}
           style={{
             background: '#0e0e0e',
-            border: `1px solid ${c.accent}30`,
-            borderRadius: 28,
-            maxWidth: 680, width: '100%',
-            maxHeight: '92vh', overflowY: 'auto',
+            width: '100%', height: '100%',
+            overflowY: 'auto',
             position: 'relative',
           }}
         >
           {/* Header */}
           <div style={{ position: 'relative' }}>
             {/* Cover image */}
-            <div style={{ height: 240, overflow: 'hidden', borderRadius: '28px 28px 0 0', background: '#111' }}>
+            <div style={{ height: 340, overflow: 'hidden', background: '#111' }}>
               <img
                 src={c.image}
                 alt={c.client}
@@ -272,7 +269,7 @@ export default function CaseModal({ c, onClose }) {
           </div>
 
           {/* Body */}
-          <div style={{ padding: '32px 36px 44px' }}>
+          <div style={{ padding: '48px 48px 80px', maxWidth: 860, margin: '0 auto' }}>
 
             {/* Headline */}
             <h2 style={{

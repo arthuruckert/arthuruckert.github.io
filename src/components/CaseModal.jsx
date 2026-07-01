@@ -80,8 +80,8 @@ function ResultsSection({ c, onZoom, ui }) {
 
       {/* Screenshots */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: imgs.length > 1 ? '1fr 1fr' : '1fr',
+        display: 'flex',
+        flexDirection: 'column',
         gap: 10,
       }}>
         {imgs.map((img, i) => (
@@ -92,7 +92,6 @@ function ResultsSection({ c, onZoom, ui }) {
             background: '#141414',
             boxShadow: `0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.03), inset 0 0 20px ${c.accent}06`,
             cursor: 'zoom-in',
-            gridColumn: imgs.length % 2 !== 0 && i === imgs.length - 1 ? 'span 2' : 'span 1',
           }}>
             {/* Window chrome bar */}
             <div style={{

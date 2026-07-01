@@ -43,12 +43,17 @@ export const cases = [
     accent: '#c8f510',
     instagram: 'https://www.instagram.com/infamouspaintball/',
     image: img('/assets/img/infamous-cover.png'),
-    resultsLabel: 'Campaign results · Meta Ads Manager',
+    resultsLabel: 'Campaign results · Meta Ads Manager · MotionApp',
     resultsImages: [
       img('/assets/img/infamous-campaigns.png'),
       img('/assets/img/infamous-campaigns-roas.png'),
       img('/assets/img/infamous-7d.png'),
       img('/assets/img/infamous-creative.png'),
+      img('/assets/img/infamous-motion-top-creatives.png'),
+      img('/assets/img/infamous-motion-creatives-148x.png'),
+      img('/assets/img/infamous-motion-cards-1.png'),
+      img('/assets/img/infamous-motion-cards-2.png'),
+      img('/assets/img/infamous-motion-storm-detail.png'),
     ],
   },
   {

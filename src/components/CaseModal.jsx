@@ -269,7 +269,7 @@ export default function CaseModal({ c, onClose }) {
           </div>
 
           {/* Body */}
-          <div style={{ padding: '48px 48px 80px', maxWidth: 860, margin: '0 auto' }}>
+          <div className="cm-body" style={{ padding: '48px 48px 80px', maxWidth: 860, margin: '0 auto' }}>
 
             {/* Headline */}
             <h2 style={{
@@ -285,7 +285,7 @@ export default function CaseModal({ c, onClose }) {
             </h2>
 
             {/* Metrics */}
-            <div style={{
+            <div className="cm-metrics" style={{
               display: 'grid',
               gridTemplateColumns: `repeat(${Math.min(c.metrics.length, 4)}, 1fr)`,
               gap: 8, marginBottom: 36,
@@ -312,7 +312,7 @@ export default function CaseModal({ c, onClose }) {
                 <p className="label" style={{ marginBottom: 20 }}>{ui.story}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                   {loc('story').map((s, i) => (
-                    <div key={i} style={{
+                    <div key={i} className="cm-story-row" style={{
                       display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16,
                       padding: '20px 0',
                       borderTop: i === 0 ? `1px solid rgba(255,255,255,0.06)` : `1px solid rgba(255,255,255,0.04)`,
@@ -392,7 +392,7 @@ export default function CaseModal({ c, onClose }) {
                     background: `${c.accent}10`,
                   }}>{c.vimeoCreatives.length} {ui.videos}</span>
                 </div>
-                <div style={{
+                <div className="cm-carousel" style={{
                   display: 'flex',
                   gap: 10,
                   overflowX: 'auto',
@@ -539,7 +539,7 @@ export default function CaseModal({ c, onClose }) {
                 </div>
 
                 {/* Horizontal scroll carousel */}
-                <div style={{
+                <div className="cm-carousel" style={{
                   display: 'flex',
                   gap: 10,
                   overflowX: 'auto',
@@ -589,7 +589,7 @@ export default function CaseModal({ c, onClose }) {
                   }}>{c.vimeoVideos.length} vídeos</span>
                 </div>
 
-                <div style={{
+                <div className="cm-carousel" style={{
                   display: 'flex',
                   gap: 12,
                   overflowX: c.vimeoVideos.length > 1 ? 'auto' : 'visible',
@@ -675,6 +675,15 @@ export default function CaseModal({ c, onClose }) {
               {ui.close}
             </button>
           </div>
+
+          <style>{`
+            @media (max-width: 640px) {
+              .cm-body { padding: 28px 20px 56px !important; }
+              .cm-metrics { grid-template-columns: 1fr 1fr !important; }
+              .cm-story-row { grid-template-columns: 1fr !important; gap: 6px !important; padding: 16px 0 !important; }
+              .cm-carousel { margin: 0 -20px !important; padding: 4px 20px 12px !important; }
+            }
+          `}</style>
         </motion.div>
       </motion.div>
     </AnimatePresence>

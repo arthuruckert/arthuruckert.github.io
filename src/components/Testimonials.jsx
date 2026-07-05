@@ -300,12 +300,6 @@ function TestimonialCard({ t: item, index, onViewCase, viewCaseLabel, instagramL
           {item.badge}
         </div>
 
-        {/* Name over photo */}
-        <div style={{ position: 'absolute', bottom: 16, left: 18 }}>
-          <div style={{ fontSize: 15, fontWeight: 800, letterSpacing: '-0.01em' }}>{item.author}</div>
-          <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 2 }}>{item.role}</div>
-        </div>
-
         {/* Action buttons bottom-right */}
         <div
           onClick={e => e.stopPropagation()}
@@ -356,10 +350,16 @@ function TestimonialCard({ t: item, index, onViewCase, viewCaseLabel, instagramL
       </div>
 
       {/* Quote */}
-      <div style={{ padding: '20px 22px 22px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 18 }}>
-        <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.75 }}>
-          "{quote}"
-        </p>
+      <div style={{ padding: '18px 22px 22px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 18 }}>
+        <div>
+          <div style={{ marginBottom: 12 }}>
+            <div style={{ fontSize: 15, fontWeight: 800, letterSpacing: '-0.01em', color: 'var(--text)' }}>{item.author}</div>
+            <div style={{ fontSize: 10, color: 'var(--subtle)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 3 }}>{item.role}</div>
+          </div>
+          <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.75 }}>
+            "{quote}"
+          </p>
+        </div>
 
         {/* Buttons */}
         <div style={{ display: 'flex', gap: 8 }}>
